@@ -40,8 +40,15 @@ const CheerCard = (props: PullRequest) => {
   let secondaryText = useColorModeValue("gray.400", "gray.400");
 
   return (
-    <Box id="domEl" ref={domEl}>
-      <Flex bg={boxBg} p="20px" alignItems="center" direction="column">
+    <Box>
+      <Flex
+        id="domEl"
+        ref={domEl}
+        bg={boxBg}
+        p="20px"
+        alignItems="center"
+        direction="column"
+      >
         <Image
           src="https://i.ibb.co/xmP2pS6/Profile.png"
           alt="Graded pic"
@@ -99,18 +106,18 @@ const CheerCard = (props: PullRequest) => {
           <Text color="muted">#HacktoberFest2022</Text>
         </HStack>
         <Divider py={6}></Divider>
-        <Flex justify="center" py={6}>
-          <Button
-            as="a"
-            leftIcon={<MdIosShare fontWeight={"bold"} />}
-            colorScheme="teal"
-            variant="solid"
-            fontSize={"18px"}
-            onClick={() => downloadPNG()}
-          >
-            Share
-          </Button>
-        </Flex>
+      </Flex>
+      <Flex justify="center" py={6}>
+        <Button
+          as="a"
+          leftIcon={<MdIosShare fontWeight={"bold"} />}
+          colorScheme="teal"
+          variant="solid"
+          fontSize={"18px"}
+          onClick={() => downloadPNG()}
+        >
+          Share
+        </Button>
       </Flex>
     </Box>
   );
